@@ -1,0 +1,14 @@
+{
+  "description": "Arcade arrangement within the MSX 64/128/64 pixel HUD. Source coordinates remain those passed by the original game.",
+  "digits": [
+    {"field": "energy", "source_y": 16, "y": 14, "x_shift": 0},
+    {"field": "credits", "source_y": 24, "y": 88, "x_shift": -34},
+    {"field": "score", "source_y": 32, "y": 32, "x_shift": 8},
+    {"field": "coins_keys", "source_y": 40, "y": 40, "x_shift": 3}
+  ],
+  "slot_x": [7, 17, 27, 37, 48, 12, 22, 32, 42, 12, 22, 32, 42],
+  "slot_y": [48, 48, 48, 48, 48, 62, 62, 62, 62, 75, 75, 75, 75],
+  "slot_paper": 0,
+  "minimap_ink": 31,
+  "minimap_paper": 0
+}

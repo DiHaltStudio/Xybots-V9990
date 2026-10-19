@@ -1,0 +1,42 @@
+{
+ "comment": "colour bytes (TMS ink<<4 | paper) each shape sheet is pre-rendered in; a colour the game uses that is missing here is drawn with the FIRST variant of the sheet (the test harness reports such misses)",
+ "font": [
+  241,
+  79,
+  110,
+  159,
+  206,
+  63,
+  17,
+  65,
+  97,
+  209,
+  193,
+  113,
+  161,
+  225
+ ],
+ "digits": [
+  79,
+  110,
+  159,
+  206,
+  63,
+  241
+ ],
+ "icons": [
+  79
+ ],
+ "ui_glyphs": [
+  241
+ ],
+ "vfont8": [
+  228,
+  230,
+  78,
+  110
+ ],
+ "vfont16": [
+  110
+ ]
+}

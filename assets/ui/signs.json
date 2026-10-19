@@ -1,0 +1,26 @@
+{
+ "description": "DANGER side signs 24x11: right B469h, left B48Ah, rear B4ABh (blit_sign)",
+ "bytes_per_row": 3,
+ "rows": 11,
+ "count": 3,
+ "items": [
+  {
+   "index": 0,
+   "addr": "B469",
+   "x": 1,
+   "y": 1
+  },
+  {
+   "index": 1,
+   "addr": "B48A",
+   "x": 26,
+   "y": 1
+  },
+  {
+   "index": 2,
+   "addr": "B4AB",
+   "x": 51,
+   "y": 1
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+build/
+original/
+release/*.rom
+release/*.zip
+release/*.pdf
+__pycache__/
+*.py[cod]
+docs/manual/*.aux
+docs/manual/*.log
+docs/manual/*.out
+docs/manual/*.toc

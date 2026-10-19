@@ -1,0 +1,23 @@
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{\tAction} & \textbf{Jugador 1} & \textbf{Jugador 2} & \textbf{\tJoystick}\\
+\midrule
+Andar adelante / atrás & \key{$\uparrow$} \key{$\downarrow$} & \key{W} \key{S} & arriba / abajo\\
+Paso a izquierda / derecha & \key{$\leftarrow$} \key{$\rightarrow$} & \key{A} \key{D} & izquierda / derecha\\
+Girar a izquierda / derecha & \key{N} \key{M} & \key{SHIFT} + \key{A} / \key{D} & botón B + izquierda / derecha\\
+Disparar & \key{ESPACIO} & \key{CTRL} & botón A\\
+Ataque especial & \key{ESPACIO} + \key{$\downarrow$} & \key{CTRL} + \key{S} & botón A + abajo\\
+Pausa / seguir & \multicolumn{2}{l}{\key{P} (cualquier jugador)} & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item El joystick 1 (puerto 1) juega para el jugador 1 y el joystick 2 (puerto 2) para el jugador 2, junto con las teclas.
+\item El disparo sale al \textbf{soltar} el botón de disparo. Mientras lo mantienes puedes seguir andando.
+\item Cada giro es un cuarto de vuelta. Si mantienes la tecla de giro, sigue girando, un cuarto tras otro.
+\item El jugador 2 gira manteniendo \key{SHIFT} y pulsando \key{A} o \key{D} (en ese caso no da el paso). \key{CTRL} + \key{A} / \key{D} dispara mientras da un paso lateral, como \key{ESPACIO} + \key{$\leftarrow$} / \key{$\rightarrow$} para el jugador 1.
+\item El \textbf{ataque especial} gasta energía: la vista destella en rojo, todos los robots a la vista quedan aturdidos y heridos, y sus disparos a la vista desaparecen.
+\item En la tienda, arriba y abajo eligen y el disparo compra (sección 7). En las pantallas que dicen \texttt{PRESS FIRE}, el disparo continúa.
+\end{itemize}

@@ -1,0 +1,68 @@
+{
+ "description": "HUD digit font 4x5 pixels in the HIGH nibble (draw_digit)",
+ "bytes_per_row": 1,
+ "rows": 5,
+ "count": 10,
+ "items": [
+  {
+   "index": 0,
+   "addr": "2A95",
+   "x": 1,
+   "y": 1
+  },
+  {
+   "index": 1,
+   "addr": "2A9A",
+   "x": 10,
+   "y": 1
+  },
+  {
+   "index": 2,
+   "addr": "2A9F",
+   "x": 19,
+   "y": 1
+  },
+  {
+   "index": 3,
+   "addr": "2AA4",
+   "x": 28,
+   "y": 1
+  },
+  {
+   "index": 4,
+   "addr": "2AA9",
+   "x": 37,
+   "y": 1
+  },
+  {
+   "index": 5,
+   "addr": "2AAE",
+   "x": 46,
+   "y": 1
+  },
+  {
+   "index": 6,
+   "addr": "2AB3",
+   "x": 55,
+   "y": 1
+  },
+  {
+   "index": 7,
+   "addr": "2AB8",
+   "x": 64,
+   "y": 1
+  },
+  {
+   "index": 8,
+   "addr": "2ABD",
+   "x": 73,
+   "y": 1
+  },
+  {
+   "index": 9,
+   "addr": "2AC2",
+   "x": 82,
+   "y": 1
+  }
+ ]
+}

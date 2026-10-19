@@ -1,0 +1,1437 @@
+{
+ "format": "indexed PNG, 64-colour palette shared with every colour sheet (assets/palette.json; `make palette-from-sprites`); index 0 = transparent; geometry is fixed by the engine's descriptor records: edit pixels only, sizes cannot change. sprites_p2.png (same layout) holds player 2's character: only the 40 player frames (18C2h-219Fh) are taken from it. Entries 21A0h/21A3h are not in the original sprite bank (0303h-219Fh): the level exit's own far and mid-far frames (the original exit shares 1224h/121Eh with the teleporter); build_b1.py points the exit descriptor at them",
+ "sprites": [
+  {
+   "id": "spr_0303",
+   "addr": "0303",
+   "bytes_per_row": 2,
+   "rows": 16,
+   "x": 2,
+   "y": 2
+  },
+  {
+   "id": "spr_0323",
+   "addr": "0323",
+   "bytes_per_row": 2,
+   "rows": 16,
+   "x": 28,
+   "y": 2
+  },
+  {
+   "id": "spr_0343",
+   "addr": "0343",
+   "bytes_per_row": 2,
+   "rows": 16,
+   "x": 54,
+   "y": 2
+  },
+  {
+   "id": "spr_0363",
+   "addr": "0363",
+   "bytes_per_row": 2,
+   "rows": 16,
+   "x": 80,
+   "y": 2
+  },
+  {
+   "id": "spr_0383",
+   "addr": "0383",
+   "bytes_per_row": 2,
+   "rows": 25,
+   "x": 106,
+   "y": 2
+  },
+  {
+   "id": "spr_03B5",
+   "addr": "03B5",
+   "bytes_per_row": 2,
+   "rows": 25,
+   "x": 132,
+   "y": 2
+  },
+  {
+   "id": "spr_03E7",
+   "addr": "03E7",
+   "bytes_per_row": 2,
+   "rows": 25,
+   "x": 158,
+   "y": 2
+  },
+  {
+   "id": "spr_0419",
+   "addr": "0419",
+   "bytes_per_row": 2,
+   "rows": 25,
+   "x": 184,
+   "y": 2
+  },
+  {
+   "id": "spr_044B",
+   "addr": "044B",
+   "bytes_per_row": 3,
+   "rows": 32,
+   "x": 210,
+   "y": 2
+  },
+  {
+   "id": "spr_04AB",
+   "addr": "04AB",
+   "bytes_per_row": 3,
+   "rows": 32,
+   "x": 236,
+   "y": 2
+  },
+  {
+   "id": "spr_050B",
+   "addr": "050B",
+   "bytes_per_row": 3,
+   "rows": 32,
+   "x": 262,
+   "y": 2
+  },
+  {
+   "id": "spr_056B",
+   "addr": "056B",
+   "bytes_per_row": 3,
+   "rows": 32,
+   "x": 288,
+   "y": 2
+  },
+  {
+   "id": "spr_05CB",
+   "addr": "05CB",
+   "bytes_per_row": 3,
+   "rows": 39,
+   "x": 2,
+   "y": 44
+  },
+  {
+   "id": "spr_0640",
+   "addr": "0640",
+   "bytes_per_row": 3,
+   "rows": 39,
+   "x": 28,
+   "y": 44
+  },
+  {
+   "id": "spr_06B5",
+   "addr": "06B5",
+   "bytes_per_row": 3,
+   "rows": 39,
+   "x": 54,
+   "y": 44
+  },
+  {
+   "id": "spr_072A",
+   "addr": "072A",
+   "bytes_per_row": 3,
+   "rows": 39,
+   "x": 80,
+   "y": 44
+  },
+  {
+   "id": "spr_079F",
+   "addr": "079F",
+   "bytes_per_row": 2,
+   "rows": 11,
+   "x": 106,
+   "y": 44
+  },
+  {
+   "id": "spr_07B5",
+   "addr": "07B5",
+   "bytes_per_row": 2,
+   "rows": 11,
+   "x": 132,
+   "y": 44
+  },
+  {
+   "id": "spr_07CB",
+   "addr": "07CB",
+   "bytes_per_row": 2,
+   "rows": 11,
+   "x": 158,
+   "y": 44
+  },
+  {
+   "id": "spr_07E1",
+   "addr": "07E1",
+   "bytes_per_row": 2,
+   "rows": 11,
+   "x": 184,
+   "y": 44
+  },
+  {
+   "id": "spr_07F7",
+   "addr": "07F7",
+   "bytes_per_row": 3,
+   "rows": 15,
+   "x": 210,
+   "y": 44
+  },
+  {
+   "id": "spr_0824",
+   "addr": "0824",
+   "bytes_per_row": 3,
+   "rows": 15,
+   "x": 236,
+   "y": 44
+  },
+  {
+   "id": "spr_0851",
+   "addr": "0851",
+   "bytes_per_row": 3,
+   "rows": 15,
+   "x": 262,
+   "y": 44
+  },
+  {
+   "id": "spr_087E",
+   "addr": "087E",
+   "bytes_per_row": 3,
+   "rows": 15,
+   "x": 288,
+   "y": 44
+  },
+  {
+   "id": "spr_08AB",
+   "addr": "08AB",
+   "bytes_per_row": 3,
+   "rows": 20,
+   "x": 2,
+   "y": 86
+  },
+  {
+   "id": "spr_08E7",
+   "addr": "08E7",
+   "bytes_per_row": 3,
+   "rows": 20,
+   "x": 28,
+   "y": 86
+  },
+  {
+   "id": "spr_0923",
+   "addr": "0923",
+   "bytes_per_row": 3,
+   "rows": 20,
+   "x": 54,
+   "y": 86
+  },
+  {
+   "id": "spr_095F",
+   "addr": "095F",
+   "bytes_per_row": 3,
+   "rows": 20,
+   "x": 80,
+   "y": 86
+  },
+  {
+   "id": "spr_099B",
+   "addr": "099B",
+   "bytes_per_row": 3,
+   "rows": 24,
+   "x": 106,
+   "y": 86
+  },
+  {
+   "id": "spr_09E3",
+   "addr": "09E3",
+   "bytes_per_row": 3,
+   "rows": 24,
+   "x": 132,
+   "y": 86
+  },
+  {
+   "id": "spr_0A2B",
+   "addr": "0A2B",
+   "bytes_per_row": 3,
+   "rows": 24,
+   "x": 158,
+   "y": 86
+  },
+  {
+   "id": "spr_0A73",
+   "addr": "0A73",
+   "bytes_per_row": 3,
+   "rows": 24,
+   "x": 184,
+   "y": 86
+  },
+  {
+   "id": "spr_0ABB",
+   "addr": "0ABB",
+   "bytes_per_row": 2,
+   "rows": 15,
+   "x": 210,
+   "y": 86
+  },
+  {
+   "id": "spr_0AD9",
+   "addr": "0AD9",
+   "bytes_per_row": 2,
+   "rows": 21,
+   "x": 236,
+   "y": 86
+  },
+  {
+   "id": "spr_0B03",
+   "addr": "0B03",
+   "bytes_per_row": 3,
+   "rows": 26,
+   "x": 262,
+   "y": 86
+  },
+  {
+   "id": "spr_0B51",
+   "addr": "0B51",
+   "bytes_per_row": 3,
+   "rows": 33,
+   "x": 288,
+   "y": 86
+  },
+  {
+   "id": "spr_0BB4",
+   "addr": "0BB4",
+   "bytes_per_row": 1,
+   "rows": 10,
+   "x": 2,
+   "y": 128
+  },
+  {
+   "id": "spr_0BBE",
+   "addr": "0BBE",
+   "bytes_per_row": 2,
+   "rows": 16,
+   "x": 28,
+   "y": 128
+  },
+  {
+   "id": "spr_0BDE",
+   "addr": "0BDE",
+   "bytes_per_row": 2,
+   "rows": 21,
+   "x": 54,
+   "y": 128
+  },
+  {
+   "id": "spr_0C08",
+   "addr": "0C08",
+   "bytes_per_row": 3,
+   "rows": 25,
+   "x": 80,
+   "y": 128
+  },
+  {
+   "id": "spr_0C53",
+   "addr": "0C53",
+   "bytes_per_row": 3,
+   "rows": 13,
+   "x": 106,
+   "y": 128
+  },
+  {
+   "id": "spr_0C7A",
+   "addr": "0C7A",
+   "bytes_per_row": 2,
+   "rows": 12,
+   "x": 132,
+   "y": 128
+  },
+  {
+   "id": "spr_0C92",
+   "addr": "0C92",
+   "bytes_per_row": 2,
+   "rows": 9,
+   "x": 158,
+   "y": 128
+  },
+  {
+   "id": "spr_0CA4",
+   "addr": "0CA4",
+   "bytes_per_row": 2,
+   "rows": 6,
+   "x": 184,
+   "y": 128
+  },
+  {
+   "id": "spr_0CB0",
+   "addr": "0CB0",
+   "bytes_per_row": 3,
+   "rows": 13,
+   "x": 210,
+   "y": 128
+  },
+  {
+   "id": "spr_0CD7",
+   "addr": "0CD7",
+   "bytes_per_row": 2,
+   "rows": 12,
+   "x": 236,
+   "y": 128
+  },
+  {
+   "id": "spr_0CEF",
+   "addr": "0CEF",
+   "bytes_per_row": 2,
+   "rows": 9,
+   "x": 262,
+   "y": 128
+  },
+  {
+   "id": "spr_0D01",
+   "addr": "0D01",
+   "bytes_per_row": 2,
+   "rows": 6,
+   "x": 288,
+   "y": 128
+  },
+  {
+   "id": "spr_0D0D",
+   "addr": "0D0D",
+   "bytes_per_row": 3,
+   "rows": 13,
+   "x": 2,
+   "y": 170
+  },
+  {
+   "id": "spr_0D34",
+   "addr": "0D34",
+   "bytes_per_row": 2,
+   "rows": 12,
+   "x": 28,
+   "y": 170
+  },
+  {
+   "id": "spr_0D4C",
+   "addr": "0D4C",
+   "bytes_per_row": 2,
+   "rows": 9,
+   "x": 54,
+   "y": 170
+  },
+  {
+   "id": "spr_0D5E",
+   "addr": "0D5E",
+   "bytes_per_row": 2,
+   "rows": 6,
+   "x": 80,
+   "y": 170
+  },
+  {
+   "id": "spr_0D6A",
+   "addr": "0D6A",
+   "bytes_per_row": 2,
+   "rows": 16,
+   "x": 106,
+   "y": 170
+  },
+  {
+   "id": "spr_0D8A",
+   "addr": "0D8A",
+   "bytes_per_row": 2,
+   "rows": 16,
+   "x": 132,
+   "y": 170
+  },
+  {
+   "id": "spr_0DAA",
+   "addr": "0DAA",
+   "bytes_per_row": 2,
+   "rows": 16,
+   "x": 158,
+   "y": 170
+  },
+  {
+   "id": "spr_0DCA",
+   "addr": "0DCA",
+   "bytes_per_row": 2,
+   "rows": 13,
+   "x": 184,
+   "y": 170
+  },
+  {
+   "id": "spr_0DE4",
+   "addr": "0DE4",
+   "bytes_per_row": 2,
+   "rows": 13,
+   "x": 210,
+   "y": 170
+  },
+  {
+   "id": "spr_0DFE",
+   "addr": "0DFE",
+   "bytes_per_row": 2,
+   "rows": 13,
+   "x": 236,
+   "y": 170
+  },
+  {
+   "id": "spr_0E18",
+   "addr": "0E18",
+   "bytes_per_row": 2,
+   "rows": 10,
+   "x": 262,
+   "y": 170
+  },
+  {
+   "id": "spr_0E2C",
+   "addr": "0E2C",
+   "bytes_per_row": 2,
+   "rows": 10,
+   "x": 288,
+   "y": 170
+  },
+  {
+   "id": "spr_0E40",
+   "addr": "0E40",
+   "bytes_per_row": 2,
+   "rows": 10,
+   "x": 2,
+   "y": 212
+  },
+  {
+   "id": "spr_0E54",
+   "addr": "0E54",
+   "bytes_per_row": 1,
+   "rows": 6,
+   "x": 28,
+   "y": 212
+  },
+  {
+   "id": "spr_0E5A",
+   "addr": "0E5A",
+   "bytes_per_row": 1,
+   "rows": 6,
+   "x": 54,
+   "y": 212
+  },
+  {
+   "id": "spr_0E60",
+   "addr": "0E60",
+   "bytes_per_row": 1,
+   "rows": 6,
+   "x": 80,
+   "y": 212
+  },
+  {
+   "id": "spr_0E66",
+   "addr": "0E66",
+   "bytes_per_row": 3,
+   "rows": 24,
+   "x": 106,
+   "y": 212
+  },
+  {
+   "id": "spr_0EAE",
+   "addr": "0EAE",
+   "bytes_per_row": 3,
+   "rows": 24,
+   "x": 132,
+   "y": 212
+  },
+  {
+   "id": "spr_0EF6",
+   "addr": "0EF6",
+   "bytes_per_row": 3,
+   "rows": 24,
+   "x": 158,
+   "y": 212
+  },
+  {
+   "id": "spr_0F3E",
+   "addr": "0F3E",
+   "bytes_per_row": 3,
+   "rows": 24,
+   "x": 184,
+   "y": 212
+  },
+  {
+   "id": "spr_0F86",
+   "addr": "0F86",
+   "bytes_per_row": 3,
+   "rows": 21,
+   "x": 210,
+   "y": 212
+  },
+  {
+   "id": "spr_0FC5",
+   "addr": "0FC5",
+   "bytes_per_row": 3,
+   "rows": 21,
+   "x": 236,
+   "y": 212
+  },
+  {
+   "id": "spr_1004",
+   "addr": "1004",
+   "bytes_per_row": 3,
+   "rows": 21,
+   "x": 262,
+   "y": 212
+  },
+  {
+   "id": "spr_1043",
+   "addr": "1043",
+   "bytes_per_row": 3,
+   "rows": 21,
+   "x": 288,
+   "y": 212
+  },
+  {
+   "id": "spr_1082",
+   "addr": "1082",
+   "bytes_per_row": 2,
+   "rows": 11,
+   "x": 2,
+   "y": 254
+  },
+  {
+   "id": "spr_1098",
+   "addr": "1098",
+   "bytes_per_row": 2,
+   "rows": 11,
+   "x": 28,
+   "y": 254
+  },
+  {
+   "id": "spr_10AE",
+   "addr": "10AE",
+   "bytes_per_row": 2,
+   "rows": 11,
+   "x": 54,
+   "y": 254
+  },
+  {
+   "id": "spr_10C4",
+   "addr": "10C4",
+   "bytes_per_row": 2,
+   "rows": 11,
+   "x": 80,
+   "y": 254
+  },
+  {
+   "id": "spr_10DA",
+   "addr": "10DA",
+   "bytes_per_row": 1,
+   "rows": 9,
+   "x": 106,
+   "y": 254
+  },
+  {
+   "id": "spr_10E3",
+   "addr": "10E3",
+   "bytes_per_row": 1,
+   "rows": 9,
+   "x": 132,
+   "y": 254
+  },
+  {
+   "id": "spr_10EC",
+   "addr": "10EC",
+   "bytes_per_row": 1,
+   "rows": 9,
+   "x": 158,
+   "y": 254
+  },
+  {
+   "id": "spr_10F5",
+   "addr": "10F5",
+   "bytes_per_row": 1,
+   "rows": 9,
+   "x": 184,
+   "y": 254
+  },
+  {
+   "id": "spr_10FE",
+   "addr": "10FE",
+   "bytes_per_row": 2,
+   "rows": 16,
+   "x": 210,
+   "y": 254
+  },
+  {
+   "id": "spr_111E",
+   "addr": "111E",
+   "bytes_per_row": 2,
+   "rows": 13,
+   "x": 236,
+   "y": 254
+  },
+  {
+   "id": "spr_1138",
+   "addr": "1138",
+   "bytes_per_row": 2,
+   "rows": 10,
+   "x": 262,
+   "y": 254
+  },
+  {
+   "id": "spr_114C",
+   "addr": "114C",
+   "bytes_per_row": 1,
+   "rows": 6,
+   "x": 288,
+   "y": 254
+  },
+  {
+   "id": "spr_1152",
+   "addr": "1152",
+   "bytes_per_row": 2,
+   "rows": 16,
+   "x": 2,
+   "y": 296
+  },
+  {
+   "id": "spr_1172",
+   "addr": "1172",
+   "bytes_per_row": 2,
+   "rows": 16,
+   "x": 28,
+   "y": 296
+  },
+  {
+   "id": "spr_1192",
+   "addr": "1192",
+   "bytes_per_row": 2,
+   "rows": 13,
+   "x": 54,
+   "y": 296
+  },
+  {
+   "id": "spr_11AC",
+   "addr": "11AC",
+   "bytes_per_row": 2,
+   "rows": 13,
+   "x": 80,
+   "y": 296
+  },
+  {
+   "id": "spr_11C6",
+   "addr": "11C6",
+   "bytes_per_row": 2,
+   "rows": 10,
+   "x": 106,
+   "y": 296
+  },
+  {
+   "id": "spr_11DA",
+   "addr": "11DA",
+   "bytes_per_row": 2,
+   "rows": 10,
+   "x": 132,
+   "y": 296
+  },
+  {
+   "id": "spr_11EE",
+   "addr": "11EE",
+   "bytes_per_row": 1,
+   "rows": 6,
+   "x": 158,
+   "y": 296
+  },
+  {
+   "id": "spr_11F4",
+   "addr": "11F4",
+   "bytes_per_row": 1,
+   "rows": 6,
+   "x": 184,
+   "y": 296
+  },
+  {
+   "id": "spr_11FA",
+   "addr": "11FA",
+   "bytes_per_row": 3,
+   "rows": 7,
+   "x": 210,
+   "y": 296
+  },
+  {
+   "id": "spr_120F",
+   "addr": "120F",
+   "bytes_per_row": 3,
+   "rows": 5,
+   "x": 236,
+   "y": 296
+  },
+  {
+   "id": "spr_121E",
+   "addr": "121E",
+   "bytes_per_row": 2,
+   "rows": 3,
+   "x": 262,
+   "y": 296
+  },
+  {
+   "id": "spr_1224",
+   "addr": "1224",
+   "bytes_per_row": 1,
+   "rows": 3,
+   "x": 288,
+   "y": 296
+  },
+  {
+   "id": "spr_1227",
+   "addr": "1227",
+   "bytes_per_row": 1,
+   "rows": 10,
+   "x": 2,
+   "y": 338
+  },
+  {
+   "id": "spr_1231",
+   "addr": "1231",
+   "bytes_per_row": 1,
+   "rows": 10,
+   "x": 28,
+   "y": 338
+  },
+  {
+   "id": "spr_123B",
+   "addr": "123B",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 54,
+   "y": 338
+  },
+  {
+   "id": "spr_1261",
+   "addr": "1261",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 80,
+   "y": 338
+  },
+  {
+   "id": "spr_1287",
+   "addr": "1287",
+   "bytes_per_row": 2,
+   "rows": 29,
+   "x": 106,
+   "y": 338
+  },
+  {
+   "id": "spr_12C1",
+   "addr": "12C1",
+   "bytes_per_row": 2,
+   "rows": 29,
+   "x": 132,
+   "y": 338
+  },
+  {
+   "id": "spr_12FB",
+   "addr": "12FB",
+   "bytes_per_row": 3,
+   "rows": 40,
+   "x": 158,
+   "y": 338
+  },
+  {
+   "id": "spr_1373",
+   "addr": "1373",
+   "bytes_per_row": 3,
+   "rows": 40,
+   "x": 184,
+   "y": 338
+  },
+  {
+   "id": "spr_13EB",
+   "addr": "13EB",
+   "bytes_per_row": 2,
+   "rows": 9,
+   "x": 210,
+   "y": 338
+  },
+  {
+   "id": "spr_13FD",
+   "addr": "13FD",
+   "bytes_per_row": 2,
+   "rows": 8,
+   "x": 236,
+   "y": 338
+  },
+  {
+   "id": "spr_140D",
+   "addr": "140D",
+   "bytes_per_row": 2,
+   "rows": 7,
+   "x": 262,
+   "y": 338
+  },
+  {
+   "id": "spr_141B",
+   "addr": "141B",
+   "bytes_per_row": 2,
+   "rows": 6,
+   "x": 288,
+   "y": 338
+  },
+  {
+   "id": "spr_1427",
+   "addr": "1427",
+   "bytes_per_row": 2,
+   "rows": 12,
+   "x": 2,
+   "y": 380
+  },
+  {
+   "id": "spr_143F",
+   "addr": "143F",
+   "bytes_per_row": 2,
+   "rows": 10,
+   "x": 28,
+   "y": 380
+  },
+  {
+   "id": "spr_1453",
+   "addr": "1453",
+   "bytes_per_row": 2,
+   "rows": 7,
+   "x": 54,
+   "y": 380
+  },
+  {
+   "id": "spr_1461",
+   "addr": "1461",
+   "bytes_per_row": 1,
+   "rows": 6,
+   "x": 80,
+   "y": 380
+  },
+  {
+   "id": "spr_1467",
+   "addr": "1467",
+   "bytes_per_row": 3,
+   "rows": 30,
+   "x": 106,
+   "y": 380
+  },
+  {
+   "id": "spr_14C1",
+   "addr": "14C1",
+   "bytes_per_row": 3,
+   "rows": 30,
+   "x": 132,
+   "y": 380
+  },
+  {
+   "id": "spr_151B",
+   "addr": "151B",
+   "bytes_per_row": 3,
+   "rows": 24,
+   "x": 158,
+   "y": 380
+  },
+  {
+   "id": "spr_1563",
+   "addr": "1563",
+   "bytes_per_row": 3,
+   "rows": 24,
+   "x": 184,
+   "y": 380
+  },
+  {
+   "id": "spr_15AB",
+   "addr": "15AB",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 210,
+   "y": 380
+  },
+  {
+   "id": "spr_15D1",
+   "addr": "15D1",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 236,
+   "y": 380
+  },
+  {
+   "id": "spr_15F7",
+   "addr": "15F7",
+   "bytes_per_row": 1,
+   "rows": 12,
+   "x": 262,
+   "y": 380
+  },
+  {
+   "id": "spr_1603",
+   "addr": "1603",
+   "bytes_per_row": 1,
+   "rows": 12,
+   "x": 288,
+   "y": 380
+  },
+  {
+   "id": "spr_160F",
+   "addr": "160F",
+   "bytes_per_row": 3,
+   "rows": 30,
+   "x": 2,
+   "y": 422
+  },
+  {
+   "id": "spr_1669",
+   "addr": "1669",
+   "bytes_per_row": 3,
+   "rows": 24,
+   "x": 28,
+   "y": 422
+  },
+  {
+   "id": "spr_16B1",
+   "addr": "16B1",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 54,
+   "y": 422
+  },
+  {
+   "id": "spr_16D7",
+   "addr": "16D7",
+   "bytes_per_row": 1,
+   "rows": 12,
+   "x": 80,
+   "y": 422
+  },
+  {
+   "id": "spr_16E3",
+   "addr": "16E3",
+   "bytes_per_row": 3,
+   "rows": 30,
+   "x": 106,
+   "y": 422
+  },
+  {
+   "id": "spr_173D",
+   "addr": "173D",
+   "bytes_per_row": 3,
+   "rows": 24,
+   "x": 132,
+   "y": 422
+  },
+  {
+   "id": "spr_1785",
+   "addr": "1785",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 158,
+   "y": 422
+  },
+  {
+   "id": "spr_17AB",
+   "addr": "17AB",
+   "bytes_per_row": 1,
+   "rows": 12,
+   "x": 184,
+   "y": 422
+  },
+  {
+   "id": "spr_17B7",
+   "addr": "17B7",
+   "bytes_per_row": 3,
+   "rows": 30,
+   "x": 210,
+   "y": 422
+  },
+  {
+   "id": "spr_1811",
+   "addr": "1811",
+   "bytes_per_row": 3,
+   "rows": 24,
+   "x": 236,
+   "y": 422
+  },
+  {
+   "id": "spr_1859",
+   "addr": "1859",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 262,
+   "y": 422
+  },
+  {
+   "id": "spr_187F",
+   "addr": "187F",
+   "bytes_per_row": 1,
+   "rows": 12,
+   "x": 288,
+   "y": 422
+  },
+  {
+   "id": "spr_188B",
+   "addr": "188B",
+   "bytes_per_row": 3,
+   "rows": 7,
+   "x": 2,
+   "y": 464
+  },
+  {
+   "id": "spr_18A0",
+   "addr": "18A0",
+   "bytes_per_row": 2,
+   "rows": 5,
+   "x": 28,
+   "y": 464
+  },
+  {
+   "id": "spr_18AA",
+   "addr": "18AA",
+   "bytes_per_row": 1,
+   "rows": 8,
+   "x": 54,
+   "y": 464
+  },
+  {
+   "id": "spr_18B2",
+   "addr": "18B2",
+   "bytes_per_row": 1,
+   "rows": 8,
+   "x": 80,
+   "y": 464
+  },
+  {
+   "id": "spr_18BA",
+   "addr": "18BA",
+   "bytes_per_row": 1,
+   "rows": 8,
+   "x": 106,
+   "y": 464
+  },
+  {
+   "id": "spr_18C2",
+   "addr": "18C2",
+   "bytes_per_row": 3,
+   "rows": 40,
+   "x": 132,
+   "y": 464
+  },
+  {
+   "id": "spr_193A",
+   "addr": "193A",
+   "bytes_per_row": 3,
+   "rows": 40,
+   "x": 158,
+   "y": 464
+  },
+  {
+   "id": "spr_19B2",
+   "addr": "19B2",
+   "bytes_per_row": 3,
+   "rows": 40,
+   "x": 184,
+   "y": 464
+  },
+  {
+   "id": "spr_1A2A",
+   "addr": "1A2A",
+   "bytes_per_row": 3,
+   "rows": 40,
+   "x": 210,
+   "y": 464
+  },
+  {
+   "id": "spr_1AA2",
+   "addr": "1AA2",
+   "bytes_per_row": 2,
+   "rows": 29,
+   "x": 236,
+   "y": 464
+  },
+  {
+   "id": "spr_1ADC",
+   "addr": "1ADC",
+   "bytes_per_row": 2,
+   "rows": 29,
+   "x": 262,
+   "y": 464
+  },
+  {
+   "id": "spr_1B16",
+   "addr": "1B16",
+   "bytes_per_row": 2,
+   "rows": 29,
+   "x": 288,
+   "y": 464
+  },
+  {
+   "id": "spr_1B50",
+   "addr": "1B50",
+   "bytes_per_row": 2,
+   "rows": 29,
+   "x": 2,
+   "y": 506
+  },
+  {
+   "id": "spr_1B8A",
+   "addr": "1B8A",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 28,
+   "y": 506
+  },
+  {
+   "id": "spr_1BB0",
+   "addr": "1BB0",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 54,
+   "y": 506
+  },
+  {
+   "id": "spr_1BD6",
+   "addr": "1BD6",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 80,
+   "y": 506
+  },
+  {
+   "id": "spr_1BFC",
+   "addr": "1BFC",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 106,
+   "y": 506
+  },
+  {
+   "id": "spr_1C22",
+   "addr": "1C22",
+   "bytes_per_row": 1,
+   "rows": 11,
+   "x": 132,
+   "y": 506
+  },
+  {
+   "id": "spr_1C2D",
+   "addr": "1C2D",
+   "bytes_per_row": 1,
+   "rows": 11,
+   "x": 158,
+   "y": 506
+  },
+  {
+   "id": "spr_1C38",
+   "addr": "1C38",
+   "bytes_per_row": 1,
+   "rows": 11,
+   "x": 184,
+   "y": 506
+  },
+  {
+   "id": "spr_1C43",
+   "addr": "1C43",
+   "bytes_per_row": 1,
+   "rows": 11,
+   "x": 210,
+   "y": 506
+  },
+  {
+   "id": "spr_1C4E",
+   "addr": "1C4E",
+   "bytes_per_row": 3,
+   "rows": 40,
+   "x": 236,
+   "y": 506
+  },
+  {
+   "id": "spr_1CC6",
+   "addr": "1CC6",
+   "bytes_per_row": 3,
+   "rows": 40,
+   "x": 262,
+   "y": 506
+  },
+  {
+   "id": "spr_1D3E",
+   "addr": "1D3E",
+   "bytes_per_row": 2,
+   "rows": 29,
+   "x": 288,
+   "y": 506
+  },
+  {
+   "id": "spr_1D78",
+   "addr": "1D78",
+   "bytes_per_row": 2,
+   "rows": 29,
+   "x": 2,
+   "y": 548
+  },
+  {
+   "id": "spr_1DB2",
+   "addr": "1DB2",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 28,
+   "y": 548
+  },
+  {
+   "id": "spr_1DD8",
+   "addr": "1DD8",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 54,
+   "y": 548
+  },
+  {
+   "id": "spr_1DFE",
+   "addr": "1DFE",
+   "bytes_per_row": 1,
+   "rows": 11,
+   "x": 80,
+   "y": 548
+  },
+  {
+   "id": "spr_1E09",
+   "addr": "1E09",
+   "bytes_per_row": 1,
+   "rows": 11,
+   "x": 106,
+   "y": 548
+  },
+  {
+   "id": "spr_1E14",
+   "addr": "1E14",
+   "bytes_per_row": 3,
+   "rows": 40,
+   "x": 132,
+   "y": 548
+  },
+  {
+   "id": "spr_1E8C",
+   "addr": "1E8C",
+   "bytes_per_row": 3,
+   "rows": 40,
+   "x": 158,
+   "y": 548
+  },
+  {
+   "id": "spr_1F04",
+   "addr": "1F04",
+   "bytes_per_row": 2,
+   "rows": 29,
+   "x": 184,
+   "y": 548
+  },
+  {
+   "id": "spr_1F3E",
+   "addr": "1F3E",
+   "bytes_per_row": 2,
+   "rows": 29,
+   "x": 210,
+   "y": 548
+  },
+  {
+   "id": "spr_1F78",
+   "addr": "1F78",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 236,
+   "y": 548
+  },
+  {
+   "id": "spr_1F9E",
+   "addr": "1F9E",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 262,
+   "y": 548
+  },
+  {
+   "id": "spr_1FC4",
+   "addr": "1FC4",
+   "bytes_per_row": 1,
+   "rows": 11,
+   "x": 288,
+   "y": 548
+  },
+  {
+   "id": "spr_1FCF",
+   "addr": "1FCF",
+   "bytes_per_row": 1,
+   "rows": 11,
+   "x": 2,
+   "y": 590
+  },
+  {
+   "id": "spr_1FDA",
+   "addr": "1FDA",
+   "bytes_per_row": 3,
+   "rows": 40,
+   "x": 28,
+   "y": 590
+  },
+  {
+   "id": "spr_2052",
+   "addr": "2052",
+   "bytes_per_row": 3,
+   "rows": 40,
+   "x": 54,
+   "y": 590
+  },
+  {
+   "id": "spr_20CA",
+   "addr": "20CA",
+   "bytes_per_row": 2,
+   "rows": 29,
+   "x": 80,
+   "y": 590
+  },
+  {
+   "id": "spr_2104",
+   "addr": "2104",
+   "bytes_per_row": 2,
+   "rows": 29,
+   "x": 106,
+   "y": 590
+  },
+  {
+   "id": "spr_213E",
+   "addr": "213E",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 132,
+   "y": 590
+  },
+  {
+   "id": "spr_2164",
+   "addr": "2164",
+   "bytes_per_row": 2,
+   "rows": 19,
+   "x": 158,
+   "y": 590
+  },
+  {
+   "id": "spr_218A",
+   "addr": "218A",
+   "bytes_per_row": 1,
+   "rows": 11,
+   "x": 184,
+   "y": 590
+  },
+  {
+   "id": "spr_2195",
+   "addr": "2195",
+   "bytes_per_row": 1,
+   "rows": 11,
+   "x": 210,
+   "y": 590
+  },
+  {
+   "id": "spr_21A0",
+   "addr": "21A0",
+   "bytes_per_row": 1,
+   "rows": 3,
+   "x": 236,
+   "y": 590
+  },
+  {
+   "id": "spr_21A3",
+   "addr": "21A3",
+   "bytes_per_row": 2,
+   "rows": 3,
+   "x": 262,
+   "y": 590
+  }
+ ]
+}

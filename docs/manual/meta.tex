@@ -1,0 +1,17 @@
+% Facts about the game. Edit this file; manual.tex and the lang files read it.
+\newcommand{\gameTitle}{Xybots}
+\newcommand{\originalPublisher}{Domark (Tengen)}
+\newcommand{\originalYear}{1989}
+\newcommand{\portAuthor}{DiHalt Studio}
+\newcommand{\portYear}{2026}
+\newcommand{\accentRGB}{175,30,45}      % accent colour of headings (R,G,B), taken from the cover
+\newcommand{\romFile}{xybots.rom}
+\newcommand{\romKind}{2~MiB ASCII16 MegaROM}   % mapper and size
+\newcommand{\ramNeeded}{64~KB}
+\newcommand{\portWork}{cartridge version, every picture, panel and text drawn by the V9990, arcade-style graphics, new controls and keyboard for player 2, pause key, Moonsound music and voices, DiHalt logo and cover picture, tools}  % what the port author did (EN)
+\newcommand{\portWorkES}{versi\'on en cartucho, todas las im\'agenes, el panel y los textos dibujados por la V9990, gr\'aficos al estilo de la recreativa, controles nuevos y teclado para el jugador 2, tecla de pausa, m\'usica y voces en Moonsound, logo de DiHalt y portada, herramientas}
+% The game is a cartridge (ROM): the manual ends with a printable cartridge label.
+% Games on disk (MSX-DOS, floppy, hard disk, SD; usually MSX2 / turbo R) have no
+% label: \cartridgefalse (new_manual.py --media disk writes it).
+\newif\ifcartridge
+\cartridgetrue

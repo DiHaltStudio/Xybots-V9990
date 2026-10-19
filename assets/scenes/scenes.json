@@ -1,0 +1,42 @@
+{
+ "entries": [
+  44,
+  38,
+  63,
+  39,
+  20,
+  62,
+  51,
+  42,
+  54,
+  43,
+  47,
+  48,
+  45,
+  40,
+  32
+ ],
+ "scenes": [
+  {
+   "name": "A: orange floor, grey walls with blue waves (arcade level 1)",
+   "sheet": "tiles/tiles_main.png"
+  },
+  {
+   "name": "B: pale pink floor and ceiling, mauve walls with a light blue hexagon bar (arcade level 8)",
+   "sheet": "scenes/scene_b.png",
+   "panels": "scenes/scene_b.json"
+  },
+  {
+   "name": "C: terracotta floor, light grey walls with a dark key pattern (arcade level 10)",
+   "sheet": "scenes/scene_c.png",
+   "panels": "scenes/scene_c.json"
+  },
+  {
+   "name": "D: mint floor and ceiling, pale blue walls with an orange zigzag (arcade level 13)",
+   "sheet": "scenes/scene_d.png",
+   "panels": "scenes/scene_d.json"
+  }
+ ],
+ "remapped": "2026-10-05",
+ "walls_generated": "2026-10-05 tools/scene_walls.py"
+}

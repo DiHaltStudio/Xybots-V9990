@@ -1,0 +1,94 @@
+{
+  "cover": "docs/img/cover_art.png",
+  "cover_shot": "docs/img/opening.png",
+  "title": "docs/img/title.png",
+  "montage": [
+    "docs/img/play_l1.png",
+    "docs/img/play_l5.png",
+    "docs/img/play_l10.png",
+    "docs/img/boss.png",
+    "docs/img/bonus_boss.png",
+    "docs/img/shop.png"
+  ],
+  "huds": [
+    {
+      "name": "hud",
+      "src": "docs/img/hud.png",
+      "box": [
+        0,
+        0,
+        384,
+        192
+      ],
+      "labels": [
+        [
+          1,
+          30,
+          12
+        ],
+        [
+          2,
+          55,
+          33
+        ],
+        [
+          3,
+          85,
+          46
+        ],
+        [
+          4,
+          112,
+          69
+        ],
+        [
+          9,
+          256,
+          90
+        ],
+        [
+          5,
+          20,
+          85,
+          "b"
+        ],
+        [
+          7,
+          55,
+          125,
+          "b"
+        ],
+        [
+          6,
+          92,
+          85,
+          "b"
+        ],
+        [
+          8,
+          116,
+          180,
+          "b"
+        ]
+      ]
+    }
+  ],
+  "label": {
+    "lines": [
+      "MSX1 \u00b7 64 KB RAM",
+      "ASCII16 MegaROM \u00b7 2 MiB"
+    ],
+    "credit": "DOMARK (TENGEN) 1989 \u00b7 V9990 PORT: DIHALT STUDIO 2026",
+    "accent": [
+      175,
+      30,
+      45
+    ],
+    "crop": [
+      0,
+      140,
+      1240,
+      733
+    ]
+  }
+}
