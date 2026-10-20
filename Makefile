@@ -7,7 +7,7 @@ XYBOTS_ARCADE_AUDIO ?= original/audio
 export XYBOTS_ARCADE_AUDIO
 ROM := build/xybots.rom
 RELEASE_ROM := release/xybots.rom
-VERSION ?= 1.0
+VERSION := $(strip $(shell cat VERSION))
 MANUAL_LANGS ?= en es
 PLAY_ROM = $(firstword $(wildcard $(RELEASE_ROM)) $(wildcard $(ROM)))
 EMU = $(OPENMSX) -machine $(MACHINE) -ext gfx9000

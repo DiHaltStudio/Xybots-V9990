@@ -48,18 +48,12 @@ rom_init:
         ld a,0x80                       ; bit 7: update the LED; mode 0 = Z80
         call 0x0180                     ; CHGCPU
         di                              ; (CHGCPU may return with interrupts enabled)
-.z80:   call v9_detect_a
+.z80:   call boot_banner
+        call v9_detect_a
         jr z,v9_present
         ld hl,msg_no_v9990              ; the BIOS is still mapped in page 0: print and stop
 msg_halt:
-        ld a,(hl)
-        and a
-        jr z,halt_loop
-        push hl
-        call CHPUT
-        pop hl
-        inc hl
-        jr msg_halt
+        call boot_print
 halt_loop:
         di
         jr halt_loop
@@ -69,6 +63,16 @@ same_slot:
         ld hl,msg_same_slot
         jr msg_halt
 v9_present:
+        ld hl,msg_v9990_found
+        call boot_print
+        di                              ; BIOS calls may enable interrupts; own the TMS status reads below
+        ld b,120                        ; 2 s NTSC / 2.4 s PAL to read the MSX-screen credits and detection result
+        in a,(TMS_CTRL)                 ; discard an already pending vertical blank
+boot_v9_wait:
+        in a,(TMS_CTRL)
+        rlca
+        jr nc,boot_v9_wait
+        djnz boot_v9_wait
         in a,(0xa8)
         ld e,a                  ; E = primary slot register set by the BIOS (page 1 = this cartridge)
         ld b,0                  ; B = candidate primary slot
@@ -148,7 +152,7 @@ ram_slot_set:
         ld a,c
         and 3
         cp l
-        jr z,same_slot          ; the RAM and the cartridge share the expanded slot: page 1 cannot be switched by the primary register
+        jp z,same_slot          ; the RAM and the cartridge share the expanded slot: page 1 cannot be switched by the primary register
         ld a,d
         or a
         ld a,h
@@ -182,6 +186,37 @@ ram_not_expanded:
         ldir
         jp OPENING
 
+; boot_banner - native MSX SCREEN 0, before RAM/slot changes. Like the Sol Negro / Shaolin's Road ports: white on dark blue,
+; original credits, port credit/year and release version, followed by the V9990 probe result. BIOS is still mapped in page 0.
+boot_banner:
+        ld a,40
+        ld (0xf3ae),a                   ; LINL40
+        ld a,15
+        ld (0xf3e9),a                   ; FORCLR
+        ld a,4
+        ld (0xf3ea),a                   ; BAKCLR
+        ld (0xf3eb),a                   ; BDRCLR
+        call 0x006c                     ; INITXT
+        call 0x0062                     ; CHGCLR
+        xor a
+        call 0x00c3                     ; CLS (Z set)
+        call 0x0044                     ; ENASCR
+        ld hl,msg_boot
+        call boot_print
+        di
+        ret
+
+; boot_print - print zero-terminated HL through the BIOS; HL is protected around CHPUT. Clobbers: AF, BC, DE, HL
+boot_print:
+        ld a,(hl)
+        or a
+        ret z
+        inc hl
+        push hl
+        call CHPUT
+        pop hl
+        jr boot_print
+
 ; v9_detect_a - reset the V9990, write 5Ah,A5h at VRAM 0 and read them back. Out: Z = present.   Clobbers: AF
 v9_detect_a:
         ld a,2
@@ -209,8 +244,16 @@ v9_detect_a:
         cp 0xa5
         ret
 
+msg_boot:
+        include "../../build/rom/version.inc"
+        db 13,10,"ATARI GAMES 1987",13,10
+        db "MSX: DOMARK (TENGEN) 1989",13,10
+        db "Z80: B. COSTAS",13,10
+        db "V9990: DIHALT STUDIO 2026",13,10,13,10,0
+msg_v9990_found:
+        db "V9990 found !",13,10,0
 msg_no_v9990:
-        db 13,10,"This cartridge needs a V9990.",13,10,0
+        db "V9990 NOT found!!!",13,10,"This cartridge needs a V9990.",13,10,0
 msg_same_slot:
         db 13,10,"The RAM and this cartridge share an expanded slot:",13,10,"put the cartridge in another slot.",13,10,0
 

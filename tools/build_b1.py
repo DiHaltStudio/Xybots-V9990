@@ -176,7 +176,8 @@ def apply_patches(img):
     for a, i in sorted(trace_insns().items()):   # single HUD (split screen): the line interrupt must be served at once
         if a >= 0x300 and i.text == "di" and img.b[a] == 0xF3:
             img.patch(a, b"\xf3", b"\x00", "DI -> NOP: it only protected TMS address pairs (no TMS any more); the V9990 line interrupt at display line 96 switches the split screen")
-    img.patch(0x394C, b"\x76", b"\x00", "minimap_actors: HALT after EI (frame wait, twice per pass) -> NOP: the interrupts are still enabled here (sound), nothing waits (ADR-013)")
+    # Keep the original EI/HALT at 394Bh/394Ch: the minimap rebuild runs
+    # after this IRQ wait, before the HUD is scanned again.
     img.patch(0xBE29, b"\xe3\xa2", word(HK_BASE + 9), "main loop: call redraw_dirty_tiles (BE28h) -> hk_nop: nothing writes the overlay map any more (actors and signs are native)")
     sites = vdp_sites()
     for key, opc, vec, pair in (("out98", 0xD3, RST_OUT98, 0x98), ("out99", 0xD3, RST_OUT99, 0x99), ("in98", 0xDB, RST_IN98, 0x98)):
@@ -310,6 +311,10 @@ def main():
     if not args.out:
         args.out = str(BUILDV / "xybots.rom")
     ROMB.mkdir(parents=True, exist_ok=True)
+    release_version = (V / "VERSION").read_text().strip()
+    if not re.fullmatch(r"\d+\.\d+", release_version):
+        sys.exit("VERSION must contain a release number such as 1.01")
+    (ROMB / "version.inc").write_text('        db "XYBOTS V9990 v%s",13,10\n' % release_version)
     for tool in ("assets4.py", "hud4.py"):
         r = subprocess.run([sys.executable, str(V / "tools" / tool), "build"], capture_output=True, text=True)
         if r.returncode != 0:

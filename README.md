@@ -2,7 +2,7 @@
 
 **An MSX cartridge version of Xybots with V9990 graphics, two-player play and optional Moonsound audio.**
 
-An unofficial homage port by **DiHalt Studio**, 2026.
+An unofficial homage port by **DiHalt Studio**, 2026. Current release: **1.01**.
 
 <p align="center">
   <img src="docs/img/cover_art.png" alt="Xybots cover art with Rock and Ace" width="720">

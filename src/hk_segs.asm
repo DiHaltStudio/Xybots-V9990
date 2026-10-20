@@ -1465,15 +1465,26 @@ hk_mm_after:
         ret
 
 ; hk_mark_box - the box of the marker entry HL (shape, x, y: cross 2x2 at x, y; ring 3x3 at x-1, y-1; arrow 8x8 at x, y) copied from
-; the clean image to VR_HUD: x-1..x+8, lines y-1..y+8 clipped to the window (0..95).   Clobbers: all
+; the clean image to VR_HUD: x-1..x+8, lines y-1..y+8 clipped to x 64..191 and y 0..95. Columns outside that window are NOT a
+; clean copy of the panels: restoring them paints atlas/record bytes onto ROCK or ACE (ADR-055).   Clobbers: all
 hk_mark_box:
         inc hl
         ld a,(hl)                       ; x
         add a,63
+        cp 64
+        jr nc,.x
+        inc a                           ; x = 0: do not restore column 63 of ROCK
+.x:
         ld c,a
         ld b,0
         ld (hk_sx),bc
         ld (hk_dx),bc
+        ld a,192
+        sub c                           ; columns left in the window
+        cp 10
+        jr c,.width
+        ld a,10
+.width: ld e,a                          ; retain width while C is used for height below
         inc hl
         ld a,(hl)                       ; y
         ld c,10
@@ -1495,7 +1506,8 @@ hk_mark_box:
         cp c
         jr nc,.n
         ld c,a                          ; clipped at line 95 (line 96 is display buffer A)
-.n:     ld hl,10
+.n:     ld l,e
+        ld h,0
         ld (hk_nx),hl
         ld l,c
         ld (hk_ny),hl

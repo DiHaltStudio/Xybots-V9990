@@ -868,7 +868,7 @@ hk_mark_kind:
         db 1,3,1,0,1,0,0,1,1,2,2,1,0,0,0,1,1,1
 
 ; hk_mark_lmmm - XOR-LMMM of marker hk_mk (shape, x, y) into the image whose Y high byte is hk_mkdy (draw page or VR_HUD): cross 2x2 at (64+x, y), ring 3x3 at (63+x, y-1), arrow 8x8
-; at (64+x, y). Rows above the HUD top (y-1 < 0) are clipped.   Clobbers: all
+; at (64+x, y). All four edges are clipped to the minimap window, including the atlas offset at the left/top (ADR-055).   Clobbers: all
 hk_mark_lmmm:
         ld a,(hk_mk)
         or a
@@ -919,7 +919,8 @@ hk_mark_lmmm:
 .go:    ld (hk_sx),hl
         ld hl,VR_MARK_Y
         ld (hk_sy),hl
-.go2:   xor a
+.go2:   call hk_mark_clip
+        xor a
         ld (hk_dx+1),a
         ld a,(hk_mkdy)
         cp VR_MAPC_HI
@@ -939,5 +940,29 @@ hk_mark_lmmm:
         ld (hk_ny+1),a
         ld a,LOP_XOR
         ld c,0xff
-        call hk_lmmm_wm
+        jp hk_lmmm_wm
+
+; hk_mark_clip - low-byte destination (hk_dx, hk_dy), B x C marker size, atlas origin already in hk_sx / hk_sy. Clip to x 64..191,
+; y 0..95 before adding the HUD/clean-image Y base. The ring's negative top row was handled above; its negative left column must
+; advance SX too. Actor coordinates were checked by hk_marker (x 0..127, y 0..95), so every intersection is nonempty. Clobbers: AF, HL
+hk_mark_clip:
+        ld a,(hk_dx)
+        cp 64
+        jr nc,.left
+        inc a                           ; only a ring at x = 0 reaches column 63
+        ld (hk_dx),a
+        ld hl,hk_sx
+        inc (hl)                        ; skip the ring's left atlas column
+        dec b
+.left:  neg
+        add a,192
+        cp b
+        jr nc,.right
+        ld b,a
+.right: ld a,(hk_dy)
+        neg
+        add a,96
+        cp c
+        ret nc
+        ld c,a
         ret

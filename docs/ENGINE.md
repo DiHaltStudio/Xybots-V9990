@@ -2,7 +2,9 @@
 
 The cartridge is a 2 MiB ASCII16 MegaROM with 128 banks. The ROM loader selects RAM, installs the original game's load image from the CAS and starts the patched program. The build keeps the tape bytes external and applies each patch only where the expected original bytes match.
 
-The hook runtime in src/ replaces the original VDP drawing paths. It uploads atlases to V9990 VRAM, composes the two player viewports, draws text and sprites, and presents the panel through a split screen. The viewports use double buffering. The minimap keeps a clean copy of its window and redraws markers from that copy, so old marker pixels are removed when players or objects move.
+Before switching to the V9990, the cartridge shows native MSX SCREEN 0 credits (Atari Games, Domark/Tengen, B. Costas and DiHalt Studio 2026), the release number from VERSION, and the V9990 detection result. When found, the result remains visible for 120 MSX frames before the logo starts. Without a V9990 the message remains on the MSX screen.
+
+The hook runtime in src/ replaces the original VDP drawing paths. It uploads atlases to V9990 VRAM, composes the two player viewports, draws text and sprites, and presents the panel through a split screen. The viewports use double buffering. The minimap keeps a clean copy of its window and redraws markers from that copy, so old marker pixels are removed when players or objects move. Both marker drawing and background restoration are clipped to the map window (x 64–191, y 0–95), preserving the bordering panels. The ring source coordinates advance when its top or left edge is clipped.
 
 Graphics use V9990 bitmap mode B1, eight bits per pixel and one shared 64-colour palette. The opening image uses a separate fixed-colour bitmap. Editable sheets and conversion rules are described in [ASSETS.md](ASSETS.md).
 

@@ -1,4 +1,8 @@
-# openMSX start-up for `make run`: show the GFX9000 output (the MSX VDP is blanked by the port). The video source can only be selected once
-# the machine has registered it, hence the deferred command.
-after boot { catch { set videosource GFX9000 } }
-after time 1 { catch { set videosource GFX9000 } }
+# Show the native MSX credits/detection first, then the V9990 logo/opening.
+# C500h is the RAM opening entry, reached after the banner's 120-frame wait.
+after boot { catch { set videosource MSX } }
+set ::xybots_opening_bp [debug set_bp 0xc500 {} {
+    catch { set videosource GFX9000 }
+    debug remove_bp $::xybots_opening_bp
+    unset ::xybots_opening_bp
+}]

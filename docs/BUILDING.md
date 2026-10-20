@@ -73,3 +73,5 @@ Make run uses a downloaded release ROM without the original files. Make, make re
 The build first validates the tape variant and checks the audio names. It extracts the loader and game image from the CAS, builds the art atlases from assets/, traces the original instructions, applies the V9990 patches, assembles the runtime with sjasm and packs 128 ASCII16 banks. The patches check the original bytes they replace; a different tape image stops the build.
 
 Build outputs stay under build/. The original/ folder and generated ROM or zip files are ignored by Git. The manual PDF files under docs/manual/ are part of this repository.
+
+The root VERSION file supplies the release number shown at power-on and used in the release ZIP filename. Edit that file when preparing a new release.
